@@ -1,0 +1,85 @@
+body {
+  margin: 0; padding: 0;
+  background: #eaf6ff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui, Arial, sans-serif;
+}
+#game {
+  position: relative;
+  width: 350px;
+  height: 600px;
+  background: #fff;
+  border: 2px solid #0099cc;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px #0099cc33;
+  touch-action: none;
+  user-select: none;
+}
+#score {
+  position: absolute;
+  left: 12px; top: 12px;
+  font-size: 1.2rem;
+  color: #0076b6;
+  font-weight: bold;
+  z-index: 10;
+}
+#catcher {
+  position: absolute;
+  bottom: 10px;
+  left: 0;  /* LUÔN để left: 0, còn js sẽ set động */
+  width: 150px;
+  height: 150px; /* hoặc chiều cao đúng của con vịt */
+  background: none; /* xóa màu nền nếu có */
+  box-shadow: none;
+  border-radius: 0;
+}
+#catcher img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+
+#ball {
+  position: absolute;
+  width: 32px; height: 32px;
+  background: #0076b6;
+  border-radius: 50%;
+  left: 50%;
+  top: 30px;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 16px #0076b633;
+}
+#gameover, #startScreen {
+  position: absolute;
+  left: 0; right: 0; top: 42%;
+  text-align: center;
+  font-size: 2rem;
+  color: #e53935;
+  font-weight: bold;
+  display: none;
+  z-index: 20;
+}
+#restartBtn, #startBtn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background: #0076b6;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#startScreen {
+  color: #0076b6;
+  font-size: 2.1rem;
+  background: rgba(255,255,255,0.92);
+  top: 35%;
+}
